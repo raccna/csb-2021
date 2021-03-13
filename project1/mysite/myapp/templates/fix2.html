@@ -1,0 +1,14 @@
+<a href="/myapp">Back</a>
+<div>This demonstrates a fix for Cross Site Scripting (XSS) vulnerability.</div>
+
+<form method="POST">
+  {% csrf_token %}
+  <label for="comment">Comment</label>
+  <textarea name="comment">
+<script>alert('This is XSS in action')</script></textarea
+  >
+  <br />
+  <input type="submit" value="Submit" />
+</form>
+
+<div>{{ comment }}</div>

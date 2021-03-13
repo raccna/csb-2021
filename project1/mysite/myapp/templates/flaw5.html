@@ -1,0 +1,33 @@
+<a href="/myapp">Back</a>
+
+<div>
+  This demonstrates Sensitive Data Exposure vulnerability. Some of the passwords
+  in database have not been encrypted properly, which enables the attacker to
+  easily decrypt them.
+</div>
+
+<form method="POST">
+  {% csrf_token %}
+  <label for="username">Username</label>
+  <input
+    type="text"
+    name="username"
+    value="=' UNION SELECT * FROM myapp_User--"
+  />
+  <br />
+  <label for="username">Password</label>
+  <input
+    type="password"
+    name="password"
+    value="=' UNION SELECT * FROM myapp_User--"
+  />
+  <br />
+  <input type="submit" value="Login" />
+</form>
+
+<div>
+  <code>{{ user }}</code>
+  <a href="https://www.md5online.org/md5-decrypt.html" target="_blank"
+    >MD5 decrypt tool</a
+  >
+</div>

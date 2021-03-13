@@ -1,0 +1,46 @@
+[
+  {
+    "model": "myapp.User",
+    "pk": 1,
+    "fields": {
+      "username": "john@doe.com",
+      "firstname": "John",
+      "lastname": "Doe",
+      "password": "JohnsSecret",
+      "admin": "True"
+    }
+  },
+  {
+    "model": "myapp.User",
+    "pk": 2,
+    "fields": {
+      "username": "jane@doe.com",
+      "firstname": "Jane",
+      "lastname": "Doe",
+      "password": "JanesSecret",
+      "admin": "False"
+    }
+  },
+  {
+    "model": "myapp.User",
+    "pk": 3,
+    "fields": {
+      "username": "jim@doe.com",
+      "firstname": "Jim",
+      "lastname": "Doe",
+      "password": "edc42553941306d1dc2b096d1a845abb",
+      "admin": "False"
+    }
+  },
+  {
+    "model": "myapp.User",
+    "pk": 4,
+    "fields": {
+      "username": "Jenn@doe.com",
+      "firstname": "Jenn",
+      "lastname": "Doe",
+      "password": "4f37034b879be91c7068a70c23c07e3b",
+      "admin": "False"
+    }
+  }
+]

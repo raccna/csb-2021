@@ -1,0 +1,17 @@
+<a href="/myapp">Back</a>
+<div>
+  This demonstrates Cross Site Scripting (XSS) vulnerability. User form input
+  has not been sanitized properly when rendered.
+</div>
+
+<form method="POST">
+  {% csrf_token %}
+  <label for="comment">Comment</label>
+  <textarea name="comment">
+<script>alert('This is XSS in action')</script></textarea
+  >
+  <br />
+  <input type="submit" value="Submit" />
+</form>
+
+<div>{{ comment | safe}}</div>

@@ -1,0 +1,12 @@
+<a href="/myapp">Back</a>
+<div>This demonstrates a fix for path traversal vulnerability.</div>
+
+<ul>
+  <li><a href="?file=files/1.txt">1.txt</a></li>
+  <li><a href="?file=../.htpasswd">.htpasswd</a></li>
+</ul>
+
+<h3>File contents</h3>
+<pre>
+{{ content }}
+</pre>

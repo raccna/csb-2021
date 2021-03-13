@@ -1,0 +1,19 @@
+<a href="/myapp">Back</a>
+<div>
+  This demonstrates XXE vulnerability. User provided XML input has not been
+  sanitized properly.
+</div>
+
+<form method="POST">
+  {% csrf_token %}
+  <label for="xml">XML</label>
+  <textarea name="xml"><!DOCTYPE replace [<!ENTITY ent SYSTEM ".htpasswd"> ]>
+    <userInfo>
+     <firstName>John</firstName>
+     <lastName>&ent;</lastName>
+    </userInfo></textarea>
+  <br />
+  <input type="submit" value="Submit" />
+</form>
+
+<pre>{{ xml }}</pre>

@@ -1,0 +1,15 @@
+<a href="/myapp">Back</a>
+<div>
+  This demonstrates path traversal vulnerability. Files are stored in
+  <i>/files</i>-directory.
+</div>
+
+<ul>
+  <li><a href="?file=1.txt">1.txt</a></li>
+  <li><a href="?file=../.htpasswd">.htpasswd</a></li>
+</ul>
+
+<h3>File contents</h3>
+<pre>
+{{ content }}
+</pre>
